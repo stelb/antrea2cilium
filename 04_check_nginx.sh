@@ -5,5 +5,6 @@ check_command="curl -s -o /dev/null -w \"%header{date} CODE %{http_code}\n\" htt
 # so to make scrolling more visible, use more or less random request detail local_port
 check_command="curl -s -o /dev/null -w \"%{local_port} CODE %{http_code}\n\" http://localhost | grep -v 200"
 
+# run the checks in separate tmux pane
 tmux split -b -v bash -c "while true; do $check_command ; done"
 tmux last-pane
