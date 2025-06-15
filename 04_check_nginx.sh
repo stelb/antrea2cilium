@@ -6,5 +6,5 @@ check_command="curl -s -o /dev/null -w \"%header{date} CODE %{http_code}\n\" htt
 check_command="curl -s -o /dev/null -w \"%{local_port} CODE %{http_code}\n\" http://localhost | grep -v 200"
 
 # run the checks in separate tmux pane
-tmux split -b -v bash -c "while true; do $check_command ; done"
+tmux split -b -v -l 20 bash -c "while true; do $check_command ; done"
 tmux last-pane
