@@ -16,6 +16,7 @@ My scripts expect a few installed commands
 - docker and compose plugin
 - kind
 - kubectl
+- k9s
 - helm
 - cilium
 - jq
