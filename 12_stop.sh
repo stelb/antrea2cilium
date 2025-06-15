@@ -4,9 +4,14 @@ echo
 echo stop loadbalancer
 
 (
-    cd lbs
+    cd compose/lbs
     docker compose stop
     docker compose rm -f
+)
+(
+    cd compose/mirrors
+    docker compose stop
+    # keep the cache for next time..
 )
 
 echo

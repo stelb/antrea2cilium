@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd lbs
+cd compose/lbs
 docker compose build
 docker compose up -d
