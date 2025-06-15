@@ -30,7 +30,7 @@ I added some 'infrastructure' for convenience which is running in docker
 #### Registry mirrors
 
 To speed things up, as images are pulled multiple time alone for a single run and to avoid waiting and hitting rate limits I added mirrors to be used
-(props to ...)
+(props to Duffie Cooley)
 
 - docker
 - github
