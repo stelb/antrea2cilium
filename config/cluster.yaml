@@ -1,0 +1,36 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+
+containerdConfigPatches:
+  - |-
+    [plugins."io.containerd.grpc.v1.cri".registry.mirrors."docker.io"]
+      endpoint = ["http://dockerio:5000"]
+    [plugins."io.containerd.grpc.v1.cri".registry.mirrors."quay.io"]
+      endpoint = ["http://quayio:5000"]
+    [plugins."io.containerd.grpc.v1.cri".registry.mirrors."ghcr.io"]
+      endpoint = ["http://ghcrio:5000"]
+    [plugins."io.containerd.grpc.v1.cri".registry.mirrors."projects.registry.vmware.com"]
+      endpoint = ["http://vmwarecom:5000"]
+
+
+name: antrea2cilium
+
+networking:
+  # the default CNI will not be installed
+  disableDefaultCNI: true
+
+nodes:
+  - role: control-plane
+#    extraPortMappings:
+#    - containerPort: 30080
+#      #      hostPort: 80
+  - role: control-plane
+#    extraPortMappings:
+#    - containerPort: 30080
+#      #      hostPort: 81
+  - role: control-plane
+  - role: worker
+  - role: worker
+  - role: worker
+  - role: worker
+
