@@ -2,6 +2,12 @@
 
 I have no tanzu to mess around, so I use kind
 
+## just show me.
+I have added some tmux magic in the scripts, so you can see what's happening without arranging terminals.
+Have a big monitor :)
+
+https://asciinema.org/a/723314
+
 ## Requirements
 
 My scripts expect a few installed commands
