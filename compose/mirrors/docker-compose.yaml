@@ -3,7 +3,7 @@ networks:
     external: true
 services:
   dockerio:
-    image: registry:2
+    image: registry:3
     environment:
       - REGISTRY_PROXY_REMOTEURL=https://registry-1.docker.io
     volumes:
@@ -11,7 +11,7 @@ services:
     networks:
       - kind
   ghcrio:
-    image: registry:2
+    image: registry:3
     environment:
       - REGISTRY_PROXY_REMOTEURL=https://ghcr.io
     volumes:
@@ -19,7 +19,7 @@ services:
     networks:
       - kind
   quayio:
-    image: registry:2
+    image: registry:3
     environment:
       - REGISTRY_PROXY_REMOTEURL=https://quay.io
     volumes:
@@ -27,7 +27,7 @@ services:
     networks:
       - kind
   vmware:
-    image: registry:2
+    image: registry:3
     environment:
       - REGISTRY_PROXY_REMOTEURL=https://projects.registry.vmware.com
     volumes:
