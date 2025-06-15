@@ -1,0 +1,11 @@
+networks:
+  kind:
+    external: true
+services:
+  nginx:
+    build: ./nginx
+    networks:
+      - kind
+    ports:
+      - 80:80
+
