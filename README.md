@@ -13,6 +13,7 @@ https://asciinema.org/a/723314
 My scripts expect a few installed commands
 
 - tmux (used for automatically splitting terminal to be used for output)
+- docker and compose plugin
 - kind
 - kubectl
 - helm
