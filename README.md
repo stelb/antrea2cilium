@@ -87,7 +87,7 @@ kubectl delete installation manifest
 ## Doing
 Start tmux and then execute scripts in oder:
 
-```
+```shell
 # docker registry mirrors in kind network
 $ ./00_registry_mirrors.sh
 # kind cluster without cni, k9s to watch all pods will be started in a tmux pane
@@ -114,9 +114,9 @@ $ ./11_delete_antrea.sh
 $ ./12_stop.sh 
 ```
 To watch cilium state, cilium.sh will start another pane calling ```cilimu status``` every few seconds
-```
+```shell
 # can be called any time
-$ ./cilium
+$ ./cilium.sh
 ```
 
 
