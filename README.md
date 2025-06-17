@@ -2,6 +2,9 @@
 
 I have no tanzu to mess around, so I use kind
 
+This is based on [Tutorial: How to Migrate to Cilium](https://isovalent.com/blog/post/tutorial-migrating-to-cilium-part-1/) by Nico Vibert
+and [Migrating from Calico](https://isovalent.com/labs/cilium-migrating-from-calico/) Lab
+
 ## just show me.
 I have added some tmux magic in the scripts, so you can see what's happening without arranging terminals.
 Have a big monitor :)
