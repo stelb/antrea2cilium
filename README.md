@@ -62,9 +62,13 @@ You need at least 2 for redundancy... but this should be obvious :)
 
 kind will be setup with config for the mentioned mirrors and without CNI
 
+[cluster.yaml](config/cluster.yaml)
+
 ### Antrea Installation
 
 just applying a manifest
+
+[02_install_antrea.sh](02_install_antrea.sh)
 
 ### Cilium pre migration installation
 
@@ -76,9 +80,12 @@ Aditionally a CiliumNodeConfig will be created, to define when a node is switche
 
 ### Actual migration
 
-Migration is triggered node by node by setting a label after cordon and draining a node.
-Migration is finished after rebooting and uncordon.
+Migration is triggered node by node by 
+* cordon and then drain the nodes
+* setting the label of nodes to be migrated io.cilium.migration/cilium-default to "true"
+* reboot and uncordon the node(s)
 
+[08_switch_nodes.sh](08_switch_nodes.sh)
 
 ### Remove Migration parameters
 
