@@ -69,6 +69,10 @@ just applying a manifest
 ### Cilium pre migration installation
 
 Cilium will be installed without being activated and with special parameters to work with workload using a different CNI.
+Aditionally a CiliumNodeConfig will be created, to define when a node is switched to cilium.
+* [helm values-migration.yaml](helm/values-migration.yaml)
+* [CiliumNodeConfig](manifests/CiliumNodeConfig.yaml)
+
 
 ### Actual migration
 
